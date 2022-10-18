@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.box{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.btn1{
+    color: #2196f3;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 4px;
+    padding: 10px 30px;
+    border:none;
+    border-radius: 10px  ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #333;
+}
+
+.a1{
+    border: 10px solid #2196f3;
+    border-radius: 1px;  
+    animation-name: yvelichivaem;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#lik{
+    letter-spacing: 8px;
+} 
+@keyframes yvelichivaem {
+    50%{
+        transform:translateY(-5px) ;scale: 1.1;
+        color:#2196f3;
+        border: 4px #2196f3 solid;
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px #2196f3   ;
+        transition: 1s;
+        border-radius: 10px;
+    }
+
+}
+
+
+
+
+
+

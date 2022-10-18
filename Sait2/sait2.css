@@ -1,0 +1,163 @@
+*::after,::before{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family:sans-serif;
+    font-weight: 40rem;
+    color: black;
+    font-size: 1.6rem;
+    letter-spacing:0.2rem;
+    padding: 5rem;
+    background-color: white;
+}
+
+.container {
+    background-color: #f7f7f7;
+}
+
+.header {
+    height: 95vh;
+    background:linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(/Sait2/fotoHeader.jpg) center / cover no-repeat;
+    /* clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 96%); */
+}
+
+.header__box {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+img{
+  margin: 15rem 5rem;
+    
+}
+
+.title-first {
+    
+    color: #FFFFFF;
+}
+
+.title-first__main {
+    display: block;
+    font-weight: 80rem;
+    font-size: 5rem;
+    line-height: 6rem;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    animation-name: leftToRights;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    backface-visibility: hidden;
+ }
+
+.title-first__secondary {
+    display: block;
+    font-weight: 10rem;
+    letter-spacing: 0.5rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    animation-name: RightsToLefts;
+    animation-duration: 10s, 10s;
+    animation-timing-function: linear;
+    backface-visibility: hidden;
+    margin-bottom: 6.5rem;
+ }
+ 
+ .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(67, 67, 67);
+    padding: 1.5rem 4rem;
+    background: white;
+    border-radius: 5rem;
+    display: inline-block;
+    transition: all 0.3s;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .btn:hover {
+    transform: translateY(-00.5rem);
+    box-shadow: 0 0.4rem 0.4rem #000000, 0  0.4rem  0.6rem #000000;
+  }
+
+.btn:hover::after{
+    opacity: 0;
+    transform: scale(1.5, 1.7);
+}
+.btn:active {
+    transform: translateY(-2px);
+    background-color: #578456;
+    box-shadow: 0 0.4rem 0.4rem #ba9909, 0 0.4rem 0.6rem #f9fd0e;
+}
+
+.btn::after {
+    content: "";
+    background: white;
+    width: 100%;
+    height:100%;
+    border-radius: 5rem;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #feffff;
+    transition: all 0.3s;
+}
+
+.btn_animated {
+    animation:btnToUp 3s ease-out 0.5s ;
+    animation-fill-mode: backwards;
+}
+
+@keyframes btnToUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100% {
+        opacity: 1;
+      
+    }
+}
+
+@keyframes leftToRights {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(5rem);
+    }
+    100% {
+        opacity: 1;
+      
+    }
+}
+
+
+@keyframes RightsToLefts {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-5rem);
+    }
+    100% {
+        opacity: 1;
+      
+   } 
+}
